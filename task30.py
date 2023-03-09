@@ -5,6 +5,11 @@
 
 # pytest -v tests\test_30.py
 
+first = int(input())
+diff = int(input())
+quantity = int(input())
+
+
 def arithmetic_progression(first: int,
                            diff: int,
                            quantity: int) -> list[int]:
@@ -12,5 +17,11 @@ def arithmetic_progression(first: int,
     1) первый элемент
     2) разность
     3) количество элементов"""
+    res = []
 
-    pass
+    for i in range(1, quantity + 1):
+        res.append(first + (i - 1) * diff)
+    return res
+
+
+print(arithmetic_progression(first, diff, quantity))
