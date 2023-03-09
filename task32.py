@@ -8,6 +8,12 @@
 # Вывод: [1, 9, 13, 14, 19]
 
 # pytest -v tests\test_32.py
+num_lst = list(map(int, input().split()))
+# print(num_lst)
+# print(type(num_lst))
+# print(type(num_lst(0)))
+min_num = int(input())
+max_num = int(input())
 
 
 def is_in_mass(num_lst: list[int],
@@ -15,4 +21,12 @@ def is_in_mass(num_lst: list[int],
                max_num: int) -> list[int]:
     """Возвращает список индексов элементов списка, которые
     находятся в диапазоне [min_num,max_num] """
-    pass
+
+    res = []
+    for i in range(len(num_lst)):
+        if min_num <= num_lst[i] <= max_num:
+            res.append(i)
+    return res
+
+
+print(is_in_mass(num_lst, min_num, max_num))
