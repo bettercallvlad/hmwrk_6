@@ -13,4 +13,13 @@ def arithmetic_progression(first: int,
     2) разность
     3) количество элементов"""
 
-    pass
+    res_list = []
+    check = False
+    if first > 0 or diff > 0 or quantity > 0:
+        check = True
+    else:
+        check = False 
+    if check:
+        for n in range (quantity):
+            res_list.append(first + n*diff)
+    return res_list
