@@ -12,5 +12,8 @@ def arithmetic_progression(first: int,
     1) первый элемент
     2) разность
     3) количество элементов"""
+    arif_list = [first+(i-1)*diff for i in range(1, quantity+1)]
+    return arif_list
 
-    pass
+
+print(arithmetic_progression(2, 3, 5))
