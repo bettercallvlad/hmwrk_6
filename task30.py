@@ -13,7 +13,5 @@ def arithmetic_progression(first: int,
     2) разность
     3) количество элементов"""
 
-    lst = []
-    for i in range(quantity):
-        lst.append(first + diff * i)
-    return lst
+    lst = (first + diff * i for i in range(quantity))
+    return list(lst)
