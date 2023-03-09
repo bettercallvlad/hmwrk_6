@@ -15,4 +15,9 @@ def is_in_mass(num_lst: list[int],
                max_num: int) -> list[int]:
     """Возвращает список индексов элементов списка, которые
     находятся в диапазоне [min_num,max_num] """
-    pass
+
+    res_lst = []
+    for i in range(len(num_lst)):
+        if min_num <= num_lst[i] and num_lst[i] <= max_num:
+            res_lst.append(i)
+    return res_lst
