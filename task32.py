@@ -10,12 +10,9 @@
 # pytest -v tests\test_32.py
 
 
-from random import randint
-
-num_arr = [randint(-5, 20) for i in range(15)]
+num_arr = [-5, 9, 0, 3, -1, -2, 1, 4, -2,
+           10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
 print(num_arr)
-small_num = int(input("enter small_num: "))
-large_num = int(input("enter large_num: "))
 
 
 def is_in_mass(num_lst: list[int],
@@ -30,4 +27,4 @@ def is_in_mass(num_lst: list[int],
     return res_arr
 
 
-print(is_in_mass(num_arr, small_num, large_num))
+print(is_in_mass(num_arr, 5, 15))
