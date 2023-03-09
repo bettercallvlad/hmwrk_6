@@ -10,9 +10,21 @@
 # pytest -v tests\test_32.py
 
 
+num_arr = [-5, 9, 0, 3, -1, -2, 1, 4, -2,
+           10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
+print(num_arr)
+
+
 def is_in_mass(num_lst: list[int],
                min_num: int,
                max_num: int) -> list[int]:
     """Возвращает список индексов элементов списка, которые
     находятся в диапазоне [min_num,max_num] """
-    pass
+    res_arr = []
+    for i in range(len(num_lst)):
+        if min_num <= num_lst[i] <= max_num:
+            res_arr.append(i)
+    return res_arr
+
+
+print(is_in_mass(num_arr, 5, 15))
