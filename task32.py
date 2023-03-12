@@ -15,4 +15,15 @@ def is_in_mass(num_lst: list[int],
                max_num: int) -> list[int]:
     """Возвращает список индексов элементов списка, которые
     находятся в диапазоне [min_num,max_num] """
-    pass
+
+    array = []
+    for i in range(len(num_lst)):
+        if min_num <= num_lst[i] <= max_num:
+            array.append(i)
+    return array
+
+
+min_num = int(input("Введите минимум для заданного диапазона:\n"))
+max_num = int(input("Введите максимум для заданного диапазона:\n"))
+num_lst = list(map(int, input("Введите числа через пробел: ").split()))
+print(is_in_mass(num_lst, min_num, max_num))
