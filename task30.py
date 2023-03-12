@@ -5,6 +5,7 @@
 
 # pytest -v tests\test_30.py
 
+
 def arithmetic_progression(first: int,
                            diff: int,
                            quantity: int) -> list[int]:
@@ -13,4 +14,14 @@ def arithmetic_progression(first: int,
     2) разность
     3) количество элементов"""
 
-    pass
+    array = []
+    for i in range(0, quantity):
+        array.append(first)
+        first += diff
+    return array
+
+
+quantity = int(input("Введите количество элементов прогрессии:\n"))
+diff = int(input("Введите разность элементов прогрессии:\n"))
+first = int(input("Введите первый элемент прогрессии:\n"))
+print(arithmetic_progression(first, diff, quantity))
